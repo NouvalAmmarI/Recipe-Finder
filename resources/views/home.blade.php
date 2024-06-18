@@ -22,8 +22,7 @@
                 <div class="main">
                     <h2>Hey! 👋,<br>It's Tasty Bites</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                        Soluta ducimus dicta nisi quisquam rerum
+                        Tasty Bites is The place for practical and delicious recipes!. Presenting various healthy and delicious recipes that are easy to follow every step of the way. Get your favorite recipes at Tasty Bites Now!!!
                     </p>
                     <a href="/FinalProject"><button>Get Started</button></a>
                 </div>
