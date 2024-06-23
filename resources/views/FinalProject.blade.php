@@ -11,7 +11,7 @@
     <title>Tasty Bites</title> 
 </head>
 
-<body style="background-image: url(img/background2.png);">
+<body>
     <nav class="sidebar close">
 
         <header>

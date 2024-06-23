@@ -13,7 +13,7 @@
 :root{
     /* ===== Colors ===== */
     /* --body-color: #e9ff99; */
-    --body-color: #7469B6;
+    --body-color: #987070;
     --sidebar-color: #FFF;
     --sidebar-green-color: #78C52C;
     /* --primary-color: #695CFE; */
@@ -32,13 +32,8 @@
 
 body{
     min-height: 100vh;
-    /* background-color: var(--body-color); */
     transition: var(--tran-05);
-    background-image: url(img/background2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover
+    background-color: #F1E5D1;
 }
 
 ::selection{
@@ -424,10 +419,10 @@ form i {
     padding: 5px 20px;
     font-size: 15px;
     cursor: pointer;
-    background: gray;
-    backdrop-filter: blur(11.6px);
+    background: #DBB5B5;
+    /* backdrop-filter: blur(11.6px);
     -webkit-backdrop-filter: blur(11.6px);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     color: var(--text-color);
     border: none;
     border-radius: 7px;
@@ -464,11 +459,12 @@ form i {
     }
 }
 
-
+/* Tampilan Menu yang Muncul */
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
+    display: flex;
   }
   
   #recipeList {
@@ -481,10 +477,10 @@ form i {
     width: calc(33.33% - 20px);
     margin: 20px 10px;
     padding: 10px 15px;
-    background: rgba(0, 0, 0, 0.56);
-    backdrop-filter: blur(11.6px);
+    background: #DBB5B5;
+    /* backdrop-filter: blur(11.6px);
     -webkit-backdrop-filter: blur(11.6px);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     border-radius: 5px;
   }
   
@@ -568,4 +564,3 @@ form i {
     margin-top: 10px; 
   }
 
-  
