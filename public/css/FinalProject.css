@@ -424,7 +424,10 @@ form i {
     padding: 5px 20px;
     font-size: 15px;
     cursor: pointer;
-    background-color: var(--sidebar-color);
+    background: gray;
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: var(--text-color);
     border: none;
     border-radius: 7px;
@@ -440,63 +443,9 @@ form i {
     color: var(--sidebar-color);
 }
 
-.horizontal-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.menu-links {
     margin-top: 10px;
 }
-
-.horizontal-card {
-    position: relative;
-    display: flex;
-    max-width: 440px;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: var(--sidebar-color); 
-}
-
-/* .card-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.card-content h3 {
-    font-size: 18px;
-    margin-top: 0;
-    color: var(--text-color); 
-}
-
-.card-content p {
-    font-size: 14px;
-    color: var(--text-color); 
-}
-
-.card-button {
-    position: absolute;
-    bottom: 10px; 
-    right: 10px; 
-    padding: 8px 12px;
-    font-size: 14px;
-    color: var(--sidebar-color); 
-    background-color: var(--primary-color); 
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: var(--tran-03);
-}
-
-.card-button:hover {
-    background-color: var(--primary-color-light); 
-} */
 
 @media screen and (max-width: 768px) {
     .search {

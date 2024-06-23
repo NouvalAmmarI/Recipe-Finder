@@ -47,6 +47,13 @@
                     </li>
 
                     <li class="nav-link">
+                        <a href="/team">
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text">Our Team</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
                         <a href="/contact">
                             <i class='bx bxs-contact icon'></i>
                             <span class="text nav-text">Contact Us</span>
@@ -82,7 +89,7 @@
     </nav>
 
     <section class="home">
-
+        {{-- Search bar --}}
         <div class="text">
             <div class="title">
                 <!-- <img src="assets/tasty (1).png" alt="" class="title-img"> -->
@@ -97,6 +104,12 @@
                 <button type="submit" class="submit_btn">Search</button>
             </form>
         </div>
+
+        <!-- Button Bahan -->
+        <ul class="menu-links" id="foodButtons">
+            <!-- button javascript -->
+        </ul>
+        
         
         <div id="recipeContainer" class="container">
             <div id="recipeList" class="recipe-list"></div>

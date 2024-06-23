@@ -123,6 +123,28 @@ function closeModal() {
   }
 }
 
+// Button Bahan
+
+const foodNames = ['Egg', 'Chicken', 'Meat', 'Potato', 'Apple', 'Shrimp', 'Onion', 'Noodle', 'Garlic', 'Chili', 'Ketchup', 'Tomato', 'Egg', 'Chicken', 'Meat', 'Potato', 'Apple', 'Shrimp', 'Onion'];
+
+const sidebarMenu = document.getElementById('foodButtons');
+
+foodNames.forEach(foodName => {
+  const foodButton = document.createElement('button');
+  foodButton.textContent = foodName;
+  foodButton.classList.add('nav-link'); 
+
+  foodButton.addEventListener('click', function() {
+    const searchInput = document.getElementById('ingredientInput');
+    const currentSearch = searchInput.value.trim();
+    const newSearch = currentSearch ? `${currentSearch}, ${foodName}` : foodName;
+    searchInput.value = newSearch;
+    searchRecipes(); 
+  });
+
+  sidebarMenu.appendChild(foodButton); 
+});
+
   
   
 
