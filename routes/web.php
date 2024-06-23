@@ -13,3 +13,7 @@ Route::get('/FinalProject', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/team', function () {
+    return view('team');
+});

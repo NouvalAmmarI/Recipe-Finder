@@ -15,6 +15,7 @@
                 <div class="logo"><a href="#">Tasty Bites</a></div>
                 <ul class="nav-links">
                     <li class="nav-link"><a href="/FinalProject">Find Recipe</a></li>
+                    <li class="nav-link"><a href="/team">Our Team</a></li>
                     <li class="nav-link"><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
