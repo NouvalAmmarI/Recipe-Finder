@@ -130,19 +130,32 @@ const foodNames = ['Egg', 'Chicken', 'Meat', 'Potato', 'Apple', 'Shrimp', 'Onion
 const sidebarMenu = document.getElementById('foodButtons');
 
 foodNames.forEach(foodName => {
-  const foodButton = document.createElement('button');
-  foodButton.textContent = foodName;
-  foodButton.classList.add('nav-link'); 
-
-  foodButton.addEventListener('click', function() {
-    const searchInput = document.getElementById('ingredientInput');
-    const currentSearch = searchInput.value.trim();
-    const newSearch = currentSearch ? `${currentSearch}, ${foodName}` : foodName;
-    searchInput.value = newSearch;
-    searchRecipes(); 
-  });
-
-  sidebarMenu.appendChild(foodButton); 
+    const foodButton = document.createElement('button');
+    foodButton.textContent = foodName;
+    foodButton.classList.add('nav-link');
+    foodButton.dataset.codeButton = 0;  // Use dataset to store the codeButton value
+  
+    foodButton.addEventListener('click', function() {
+        const codeButton = parseInt(foodButton.dataset.codeButton, 10);  // Retrieve the codeButton value from dataset
+        const searchInput = document.getElementById('ingredientInput');
+        const currentSearch = searchInput.value.trim();
+        
+        if (codeButton === 1) {
+            const newSearchHapus = currentSearch.replace(new RegExp(`\\b${foodName}\\b`, 'g'), '').trim();
+            searchInput.value = newSearchHapus;
+            foodButton.style.backgroundColor = '';  // Reset the button style
+            foodButton.dataset.codeButton = 0;  // Update the codeButton value in dataset
+            searchRecipes();
+        } else {
+            const newSearch = currentSearch ? `${currentSearch} ${foodName}` : foodName;
+            searchInput.value = newSearch;
+            foodButton.style.backgroundColor = '#3a3b3c';
+            foodButton.dataset.codeButton = 1;  // Update the codeButton value in dataset
+            searchRecipes();
+        }
+    });
+  
+    sidebarMenu.appendChild(foodButton); 
 });
 
   
