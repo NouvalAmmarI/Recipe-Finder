@@ -33,11 +33,7 @@
 
         <div class="menu-bar">
             <div class="menu">
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
+               
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="/">
@@ -61,6 +57,11 @@
                     </li>
 
                 </ul>
+                <li class="search-box">
+                    <!-- <i class='bx bx-search icon'></i> -->
+                    <input type="text" placeholder="">
+                </li>
+
             </div>
 
             <div class="bottom-content">
@@ -89,10 +90,10 @@
     </nav>
 
     <section class="home">
-        {{-- Search bar --}}
+        <!-- Search -->
         <div class="text">
             <div class="title">
-                <!-- <img src="assets/tasty (1).png" alt="" class="title-img"> -->
+                <!-- <img src="img/tasty (1).png" alt="" class="title-img"> -->
                 <p>Tasty Bites</p>
             </div>
             
@@ -110,7 +111,7 @@
             <!-- button javascript -->
         </ul>
         
-        
+        <!-- Tampilkan Recipe -->
         <div id="recipeContainer" class="container">
             <div id="recipeList" class="recipe-list"></div>
         </div>

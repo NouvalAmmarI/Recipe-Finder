@@ -12,16 +12,16 @@
 
 :root{
     /* ===== Colors ===== */
-    /* --body-color: #e9ff99; */
-    --body-color: #987070;
-    --sidebar-color: #FFF;
+    --body-color: #F1E5D1;
+    --sidebar-color: #DBB5B5;
     --sidebar-green-color: #78C52C;
-    /* --primary-color: #695CFE; */
-    --primary-color: gray;
+    --primary-color: #F1E5D1;
+    /* --primary-color: gray; */
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     /* --text-color: #707070; */
     --text-color: black;
+    --card-color: #DBB5B5;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -32,8 +32,14 @@
 
 body{
     min-height: 100vh;
+    background-color: var(--body-color);
     transition: var(--tran-05);
-    background-color: #F1E5D1;
+    /* background-image: url(assets/background2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover */
+
 }
 
 ::selection{
@@ -48,6 +54,7 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --card-color: #3a3b3c;
 }
 
 /* ===== Sidebar ===== */
@@ -59,7 +66,7 @@ body.dark{
     width: 250px;
     margin-right: 10px;
     padding: 10px 14px;
-    background: var(--body-color);
+    background: var(--sidebar-color);
     transition: var(--tran-05);
     z-index: 100;  
 }
@@ -175,7 +182,7 @@ body.dark .sidebar header .toggle{
 
 .sidebar li.search-box{
     border-radius: 6px;
-    background-color: var(--primary-color-light);
+    background-color: var(--body-color);
     cursor: pointer;
     transition: var(--tran-05);
 }
@@ -185,7 +192,7 @@ body.dark .sidebar header .toggle{
     width: 100%;
     outline: none;
     border: none;
-    background-color: var(--primary-color-light);
+    background-color: var(--sidebar-color);
     color: var(--text-color);
     border-radius: 6px;
     font-size: 17px;
@@ -210,7 +217,7 @@ body.dark .sidebar header .toggle{
 }
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text{
-    color: var(--sidebar-color);
+    color: var(--text-color);
 }
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text{
@@ -312,7 +319,7 @@ body.dark .switch::before{
     font-weight: 500;
     color: var(--text-color);
     padding: 12px 60px;
-    background-color: var(--body-color);
+    background-color: var(--sidebar-color);
     position: sticky;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     border-bottom-left-radius: 25px;
@@ -419,7 +426,7 @@ form i {
     padding: 5px 20px;
     font-size: 15px;
     cursor: pointer;
-    background: #DBB5B5;
+    background: var(--sidebar-color);
     /* backdrop-filter: blur(11.6px);
     -webkit-backdrop-filter: blur(11.6px);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
@@ -477,7 +484,7 @@ form i {
     width: calc(33.33% - 20px);
     margin: 20px 10px;
     padding: 10px 15px;
-    background: #DBB5B5;
+    background: var(--card-color);
     /* backdrop-filter: blur(11.6px);
     -webkit-backdrop-filter: blur(11.6px);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
@@ -507,11 +514,11 @@ form i {
   }
   
   .modal-content {
-    background-color: #fff;
+    background-color: #F1E5D1;
     padding: 20px;
     border-radius: 5px;
-    max-width: 50%;
-    max-height: 70%;
+    max-width: 60%;
+    max-height: 80%;
     overflow-y: auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -555,12 +562,55 @@ form i {
   }
 
   .btn_view button{
-    border-radius: 25px;
-    padding: 4px 8px;
+    border-radius: 15px;
+    padding: 8px 14px;
     border: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
+    margin-left: 50px;
     margin-top: 10px; 
+    background-color: var(--body-color);
+    color: var(--text-color);
   }
 
+  .btn_view button:hover {
+    background-color: var(--sidebar-color);
+    transition: var(--tran-03);
+  }
+
+  .circular-progress {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    display: none; /* Initially hidden */
+  }
+  
+  .circular-progress-svg {
+    transform: rotate(-90deg);
+  }
+  
+  .circular-progress-bg {
+    fill: none;
+    stroke: #f3f3f3;
+    stroke-width: 3.8;
+  }
+  
+  .circular-progress-fill {
+    fill: none;
+    stroke: #007bff;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    stroke-dasharray: 100, 100;
+    transition: stroke-dasharray 0.3s ease;
+  }
+  
+  .circular-progress-text {
+    position: absolute;
+    font-size: 1.2em;
+    font-weight: bold;
+  }

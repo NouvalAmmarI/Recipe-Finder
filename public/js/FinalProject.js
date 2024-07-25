@@ -33,7 +33,7 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
       return;
   }
 
-  const apiKey = 'caf0d820e15e476ea68969f5c7f43832'; // Ganti dengan kunci API Spoonacular Anda
+  const apiKey = 'caf0d820e15e476ea68969f5c7f43832'; // API Key
   const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${ingredient}`;
 
   fetch(apiUrl)
@@ -74,7 +74,7 @@ function displayRecipes(results) {
 }
 
 function viewRecipeDetails(recipeId) {
-  const apiKey = 'caf0d820e15e476ea68969f5c7f43832'; // Ganti dengan kunci API Spoonacular Anda
+  const apiKey = 'caf0d820e15e476ea68969f5c7f43832'; // API KEY
   const apiUrl = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`;
 
   fetch(apiUrl)
@@ -111,7 +111,7 @@ function displayRecipeModal(recipe) {
 
   document.body.insertAdjacentHTML('beforeend', modalContent);
 
-  // Disable scrolling on the background content when modal is open
+  // Disable scrolling di background
   document.body.style.overflow = 'hidden';
 }
 
@@ -125,7 +125,7 @@ function closeModal() {
 
 // Button Bahan
 
-const foodNames = ['Egg', 'Chicken', 'Meat', 'Potato', 'Apple', 'Shrimp', 'Onion', 'Noodle', 'Garlic', 'Chili', 'Ketchup', 'Tomato', 'Egg', 'Chicken', 'Meat', 'Potato', 'Apple', 'Shrimp', 'Onion'];
+const foodNames = ['Egg', 'Chicken', 'Meat', 'Potato', 'Apple', 'Shrimp', 'Onion', 'Noodle', 'Garlic', 'Chili', 'Ketchup', 'Tomato', 'Pork', 'Beef', 'Carrot', 'Lettuce', 'Squid'];
 
 const sidebarMenu = document.getElementById('foodButtons');
 
@@ -157,11 +157,4 @@ foodNames.forEach(foodName => {
   
     sidebarMenu.appendChild(foodButton); 
 });
-
   
-  
-
-
-
-
-
